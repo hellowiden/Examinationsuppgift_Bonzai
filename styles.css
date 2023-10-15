@@ -1,0 +1,623 @@
+/* Import the Montserrat font with specific weights and styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;900&display=swap');
+
+/* Root Variables */
+:root {
+    --h1-font-size: 3.052rem;
+    --h2-font-size: 2.441rem;
+    --h3-font-size: 1.953rem;
+    --h4-font-size: 1.563rem;
+    --h5-font-size: 1.25rem;
+    --h6-font-size: 1rem;
+
+    --ff-Main: 'Montserrat', sans-serif;
+
+    --step--2: clamp(0.7813rem, calc(var(--h6-font-size) + 0.0326vw), calc(var(--h6-font-size) + 0.8rem));
+    --step--1: clamp(0.9375rem, calc(var(--h5-font-size) + 0.1087vw), calc(var(--h5-font-size) + 1rem));
+    --step-0: clamp(1.125rem, calc(var(--h4-font-size) + 0.2174vw), calc(var(--h4-font-size) + 1.25rem));
+    --step-1: clamp(1.35rem, calc(var(--h3-font-size) + 0.3696vw), calc(var(--h3-font-size) + 1.5625rem));
+    --step-2: clamp(1.62rem, calc(var(--h2-font-size) + 0.5793vw), calc(var(--h2-font-size) + 1.9531rem));
+    --step-3: clamp(1.9438rem, calc(var(--h1-font-size) + 0.8652vw), calc(var(--h1-font-size) + 2.4413rem));
+    --step-4: clamp(2.3325rem, calc(var(--h1-font-size) + 1.2511vw), calc(var(--h1-font-size) + 3.0519rem));
+    --step-5: clamp(2.7994rem, calc(var(--h1-font-size) + 1.7663vw), calc(var(--h1-font-size) + 3.815rem));
+}
+
+/* Theme Styles */
+
+/* Light Theme */
+:root[data-theme="light"]  {
+    --primary-color: #006d3c;
+    --secondary-color: #FFA500;
+    --background-color: #F0F0F0; 
+    --text-color: #333333;
+    --secondary-text-color: #666666;
+    --tertiary-text-color: #999999;
+}
+
+/* Dark Theme */
+:root[data-theme="dark"] {
+    --primary-color: #006d3c;
+    --secondary-color: #FFA500;
+    --background-color: #121212; 
+    --text-color: #F5F5F5;
+    --secondary-text-color: #B0B0B0;
+    --tertiary-text-color: #C0C0C0;
+}
+
+/* General Styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color-scheme: light dark;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 0.5fr; 
+    background-color: var(--background-color);
+}
+
+/* Header styles */
+.header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+    grid-column: span 3; 
+}
+
+main {
+    grid-column: 2; 
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+/* Typography Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: var(--ff-Main);
+    line-height: 1.5;
+    padding-top: 10px;
+}
+
+h1 {
+    font-size: var(--step-3);
+    font-weight: 900; 
+}
+
+h2 {
+    font-size: var(--step-2);
+    font-weight: 600; 
+}
+
+h3 {
+    font-size: var(--step-1);
+    font-weight: 500; 
+}
+
+h4 {
+    font-size: var(--step-0);
+    font-weight: 400; 
+}
+
+h5 {
+    font-size: var(--step--1);
+    font-weight: 400; 
+}
+
+h6 {
+    font-size: var(--step--2);
+    font-weight: 400;
+}
+
+p {
+    font-size: var(--step--2);
+    font-weight: 400;
+    line-height: 2;
+}
+
+a {
+    font-family: var(--ff-Main);
+    font-weight: 400;
+}
+
+/*-----------------------------------------------ALL MAIN CODE STARTS BELOW-----------------------------------------------------------*/
+
+/* Header styles */
+.header__menu__link--active {
+    font-weight: bold;
+}
+
+.header__logo {
+    cursor: pointer;
+}
+
+.header__logo__image {
+    max-width: 100px;
+    height: auto;
+}
+
+.header__menu {
+    list-style: none;
+    display: flex;
+}
+
+.header__menu__link {
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 10px;
+    transition: background-color 0.3s;
+}
+
+.header__menu__link:hover {
+    background-color: var(--primary-color);
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    grid-column: 1 / span 3;
+}
+
+/* Availability form */
+.main-feature {
+    display: grid;
+    grid-template-columns:  1fr;
+    width: 100%;
+    grid-column: 1 / span 3;
+}
+
+.main-feature--container {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.main-feature__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 800px;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+    ),
+    url("assets/photos/Day/03-day.jpg") center/cover no-repeat;
+    color: var(--background-color);
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    
+}
+
+.hero__title {
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.hero__description {
+    color: var(--extra-light);
+}
+
+.booking__container {
+    position: absolute;
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    border-radius: 6px;
+    border: 1px solid var(--primary-color);
+    color: #121212;
+    background-color: rgba(255, 255, 255, 0.873);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.booking__container form {
+    width: 100%;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.input__group {
+    width: 100%;
+    position: relative;
+}
+
+.input__group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-150%);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    pointer-events: none;
+    transition: 0.3s;
+    grid-column: 2;
+}
+
+.input__group input {
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--text-dark);
+    font-size: 0.8rem;
+}
+
+.form__group p {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.btn {
+    padding: 1rem;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.availability-form__button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.availability-form__button:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .booking__container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .booking__container form {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .booking__container {
+        bottom: -20rem;
+    }
+    .main-feature__image {
+        min-height: 1200px;
+    }
+}
+
+/* About Section */
+.about {
+    display: flex;
+    text-align: center;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 50px;
+}
+
+.about__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+}
+
+.about__copy {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 50px;
+    background-color: var(--background-color-light);
+    color: var(--background-2-light);
+}
+
+.about__title {
+    font-size: var(--step--2);
+    font-weight: 400;
+    line-height: 2;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.about__subtitle {
+    font-size: var(--step--2);
+    font-weight: 400;
+    line-height: 2;
+}
+
+.about__copy ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.about__copy ul li {
+    margin: 10px 0;
+    font-size: var(--step--2);
+    font-weight: 400;
+    line-height: 2;
+}
+
+@media (max-width: 768px) {
+    .about__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about__copy {
+        order: 1;
+    }
+
+    .about__side {
+        width: auto;
+    }
+    .about {
+        margin-top: 350px;
+    }
+}
+
+/* Services section */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 50vh;
+}
+
+.services__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.services__item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.services__item:nth-child(1) {
+    background-color: var(--background-2-light);
+    color: var(--background-color-light);
+}
+
+.services__item:nth-child(2) {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('assets/photos/Night/01-night.jpg');
+    background-size: cover;
+    color: #fafafa; 
+}
+
+.services__item:nth-child(3) {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('assets/photos/Night/02-night.jpg');
+    background-size: cover;
+    color: #fafafa; 
+}
+
+.services__item:nth-child(4) {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('assets/photos/Night/03-night.jpg');
+    background-size: cover;
+    color: #fafafa; 
+}
+
+.services__item:nth-child(5) {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('assets/photos/Night/04-night.jpg');
+    background-size: cover;
+    color: #fafafa; 
+}
+
+.services__item:nth-child(6) {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('assets/photos/Night/05-night.jpg');
+    background-size: cover;
+    color: #fafafa; 
+}
+
+@media screen and (max-width: 768px) {
+    .services {
+        grid-template-columns: 1fr;
+        height: 90vh;
+    }
+}
+
+/* Contact Section */
+.contact {
+    display: flex;
+    text-align: center;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-2-light);
+    color: var(--background-color-light);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+}
+
+.contact__copy {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 50px;
+    height: 100%;
+}
+
+.contact__map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    height: 100%;
+}
+
+.contact__map-iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .contact {
+        grid-template-columns: 1fr;
+    }
+    .contact {
+        margin-top: 350px;
+    }
+}
+
+/* Footer */
+.footer {
+    display: grid;
+    grid-column: 1 / span 3; 
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    text-align: center;
+    color: var(--background-color);
+}
+
+/* Rooms */
+
+.rooms {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.room-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.room {
+    flex: 0 0 calc(33.33% - 20px);
+    display: grid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.room-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.room-details {
+    padding: 20px;
+}
+
+.room-details h3 {
+    color: #333;
+}
+
+.room-details .rating {
+    margin: 10px 0;
+}
+
+.room-details .rating .fa-star {
+    color: gold;
+}
+
+.room-details p {
+    font-size: 16px;
+    color: #666;
+}
+
+.room-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.book-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.room-price h2 {
+    color: #333;
+}
+
+.room-price span {
+    font-size: 16px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .room {
+        flex: 0 0 100%;
+        margin-right: 0;
+    }
+    .rooms {
+        margin-top: 350px;
+    }
+}

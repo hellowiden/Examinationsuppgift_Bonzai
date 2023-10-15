@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1, safari">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/logo/bonz.ai-logo-black-symbol.ico" type="image/x-icon">
+    <link rel="icon" href="assets/logo/bonz.ai-logo-white-symbol.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bonzai</title>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <header class="header">
+      <a href="index.html" class="header__logo-link">
+          <div class="header__logo">
+              <img src="assets/logo/bonz.ai-logo-white-landscape.png" alt="Bona.ai Logo" class="header__logo__image">
+          </div>
+      </a>
+      <nav class="header__nav">
+          <ul class="header__menu">
+              <li class="header__menu-item"><a href="about.html" class="header__menu__link">About Us</a></li>
+              <li class="header__menu-item"><a href="rooms.html" class="header__menu__link">Rooms</a></li>
+              <li class="header__menu-item"><a href="contact.html" class="header__menu__link">Contact</a></li>
+          </ul>
+      </nav>
+    </header>
+    
+
+    <!-- Main Feature Section and Booking -->
+    <section class="main-feature main-feature--container">
+        <div class="main-feature__image">
+            <section class="hero">
+                <div class="hero__overlay"></div>
+                <div class="hero__content">
+                    <h1 class="hero__title">About us</h1>
+                </div>
+            </section>
+            <div class="booking__container">
+                <form>
+                    <div class="form__group">
+                        <div class="input__group">
+                            <input type="text" />
+                            <label for="location">Location</label>
+                        </div>
+                        <p>Enter your location</p>
+                    </div>
+                    <div class="form__group">
+                        <div class="input__group">
+                            <input type="date" />
+                            <label for="check-in">Check In</label>
+                        </div>
+                        <p>Add date</p>
+                    </div>
+                    <div class="form__group">
+                        <div class="input__group">
+                            <input type="date" />
+                            <label for="check-out">Check Out</label>
+                        </div>
+                        <p>Add date</p>
+                    </div>
+                    <div class="form__group">
+                        <div class="input__group">
+                            <input type="text" />
+                            <label for="guests">Guests</label>
+                        </div>
+                        <p>Amount of Guests</p>
+                    </div>
+                </form>
+                <button type="button" id="searchButton" class="availability-form__button">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <main>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <div class="about__grid">
+            <div class="about__copy">
+                <h3 class="about__title">Welcome to a Haven of AI-Enhanced Eco Retreat</h3>
+                <p>Embark on a journey to discover the pinnacle of comfort and elegance at our luxurious hotel, established in 2023. Our unwavering dedication is to provide you with an extraordinary stay that surpasses your loftiest expectations. With a dedicated team committed to ensuring your experience is nothing short of remarkable, your sojourn with us is bound to be unforgettable.</p>
+                <h4 class="about__subtitle">Our Mission</h4>
+                <p>We are on a mission to create a sanctuary that seamlessly combines relaxation and sophistication for our esteemed guests, all while embracing our role as responsible stewards of the environment. Featuring sumptuous rooms, world-class dining, and impeccable service, your stay with us becomes a journey of indulgence and rejuvenation. We are continually striving to enhance your experience while remaining steadfast in our commitment to eco-friendly principles.</p>
+                <h4 class="about__subtitle">Environmental Commitment</h4>
+                <p>By choosing our destination, you not only bask in luxury and refinement but also become a part of our unwavering commitment to environmental sustainability. We believe that your stay at our hotel pods is not just an avenue for relaxation but an opportunity to connect with and appreciate the natural beauty that surrounds us. We extend our heartfelt gratitude to you for choosing to be a part of our eco-conscious journey.</p>
+                <h4 class="about__subtitle">Facilities</h4>
+                <p>Our hotel offers an array of world-class facilities to enhance your stay, including:</p>
+                <ul>
+                    <li>Sumptuous and spacious rooms and suites</li>
+                    <li>Exquisite on-site dining with a variety of culinary delights</li>
+                    <li>State-of-the-art fitness center</li>
+                    <li>Relaxing spa and wellness center</li>
+                    <li>Outdoor swimming pool with breathtaking views</li>
+                    <li>Conference and event spaces for business and social gatherings</li>
+                    <li>24/7 concierge and room service</li>
+                    <li>Complimentary Wi-Fi and in-room amenities for your convenience</li>
+                    <li>Beautifully landscaped gardens and walking trails</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2023 CryptoSurfers. All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- Script for booking module button -->
+    <script>
+        document.getElementById("searchButton").addEventListener("click", function() {
+        window.location.href = "rooms.html";
+        });
+    </script>
+
+</body>
+</html>
